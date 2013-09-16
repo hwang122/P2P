@@ -23,14 +23,17 @@ public class Server {
 		catch(RemoteException e) {
 			e.printStackTrace();
 			System.out.println("Fail to create remote object!");
+			System.exit(-1);
 		} 
 		catch (MalformedURLException e) {
 			e.printStackTrace();
 			System.out.println("URL error!");
+			System.exit(-1);
 		} 
 		catch (AlreadyBoundException e) {
 			e.printStackTrace();
 			System.out.println("Service already bound!");
+			System.exit(-1);
 		}
 	}
 	
